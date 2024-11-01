@@ -37,15 +37,8 @@ def ReLu(array, int):
     (call argument "cutoff" and set default to 0).
     The function returns a numpy array of the same length, with all
     elements smaller than the cutoff being set to cutoff)."""
-    n_array = []
     cutoff = int or 0
-
-    for value in array:
-        if value < cutoff:
-            n_array.append(cutoff)
-        else:
-            n_array.append(value)
-    return n_array
+    return np.maximum(array, cutoff)
 # -----------------------------------------------
 
 
