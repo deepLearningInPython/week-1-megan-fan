@@ -32,12 +32,12 @@ def step(number):
 
 # Your code here:
 # -----------------------------------------------
-def ReLu(array, int):
+# -----------------------------------------------
+def ReLu(array, cutoff = 0):
     """function that takes in two arguments: a numpy array, and an integer
     (call argument "cutoff" and set default to 0).
     The function returns a numpy array of the same length, with all
     elements smaller than the cutoff being set to cutoff)."""
-    cutoff = int or 0
     return np.maximum(array, cutoff)
 # -----------------------------------------------
 
