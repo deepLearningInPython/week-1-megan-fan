@@ -13,8 +13,12 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
-
+def step(number):
+    """ If the number is larger than zero, the function should return 1, otherwise is should return -1 """
+    if number > 0:
+        return 1
+    else:
+        return -1
 
 # -----------------------------------------------
 
@@ -28,9 +32,20 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(array, int):
+    """function that takes in two arguments: a numpy array, and an integer
+    (call argument "cutoff" and set default to 0).
+    The function returns a numpy array of the same length, with all
+    elements smaller than the cutoff being set to cutoff)."""
+    n_array = []
+    cutoff = int or 0
 
-
+    for value in array:
+        if value < cutoff:
+            n_array.append(cutoff)
+        else:
+            n_array.append(value)
+    return n_array
 # -----------------------------------------------
 
 
@@ -44,7 +59,11 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+def neural_net_layer(array_1, arrary_2):
+    """Multiplies a 2D numpy array (matrix) with a 1D numpy array (vector),
+        then applies the ReLU function to the result."""
+    multi = array_1 @ arrary_2
+    return ReLu(multi)
 
 
 # ------------------------------------------
